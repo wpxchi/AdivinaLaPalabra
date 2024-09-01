@@ -1,0 +1,115 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #c135eb, #7551e9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #ffffff40;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #7551e9;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #7551e9;
+    color: white;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c135eb;
+}
+
+.container {
+    background-color: #2d2f33;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h4 {
+    margin-top: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #ffffff20;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.title-gradient {
+    font-size: 2.5rem; /* Tamaño del título, ajusta según prefieras */
+    font-weight: bold;
+    background: linear-gradient(135deg, #c135eb, #7551e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: #ff4d4d; /* Color rojo para indicar error */
+    font-weight: bold; /* Negrita para resaltar */
+    background-color: #ffe6e6; /* Fondo suave para resaltar el mensaje */
+    padding: 0.5rem; /* Espaciado alrededor del texto */
+    border: 1px solid #ff4d4d; /* Borde rojo para resaltar el error */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 0.5rem; /* Espacio entre el mensaje de error y otros elementos */
+    animation: shake 0.3s ease-in-out; /* Animación para atraer la atención */
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
