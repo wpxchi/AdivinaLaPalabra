@@ -57,6 +57,7 @@ const RandomWord = () => {
 
     const [estadoPalabra, setEstadoPalabra] = useState('');
     const [palabraCorrecta, setPalabraCorrecta] = useState('');
+    const [palabraCorrectaMin, setPalabraCorrectaMin] = useState('');
     const [definicion, setDefinicion] = useState('');
     const [palabraInput, setPalabraInput] = useState('');
     const [correcto, setCorrecto] = useState(0);
@@ -70,6 +71,7 @@ const RandomWord = () => {
         const palabraDesordenada = palabraAleatoria.palabra.split('').sort(() => Math.random() - 0.5).join('');
         setEstadoPalabra(palabraDesordenada);
         setPalabraCorrecta(palabraAleatoria.palabra);
+        setPalabraCorrectaMin(palabraAleatoria.palabra.toLowerCase()); // Guardar palabra correcta en minúsculas
         setDefinicion(palabraAleatoria.definicion);
         setPalabraInput('');
         setIntentos(0);
@@ -102,7 +104,7 @@ const RandomWord = () => {
         }
         setErrorInput(false); // Ocultar el mensaje de error si se ingresó algo
 
-        if (palabraCorrecta === palabraInput) {
+        if (palabraCorrectaMin === palabraInput.toLowerCase()) { // Convertir la entrada a minúsculas para comparación
             setCorrecto(correcto + 1);
             if (correcto + 1 === 10) {
                 setGanador(true);
